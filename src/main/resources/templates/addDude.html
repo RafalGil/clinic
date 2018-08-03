@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<div th:replace="nav :: 'nav'">
+</div>
+
+
+<form th:action="@{/addDude}" th:object="${Patient}" method="post">
+    <input type="hidden" th:field="*{id}"/>
+    <label>Imię</label>
+    <input type="text" th:field="*{name2}">
+    <label>Nazwisko</label>
+    <input type="text" th:field="*{surname2}">
+    <label>Pokój</label>
+    <input type="text" th:field="*{pesel}">
+    <input type="submit" value="Dodaj kolesia"/>
+
+</form>
+
+</body>
+</html>

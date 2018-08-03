@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" th:href="@{/style.css}" />
+
+</head>
+<body>
+
+
+<!--<div th:replace="nav :: 'nav'">-->
+<!--</div>-->
+
+<div class = "container">
+    <div class = "navbar">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <form th:action="@{/add}" th:object="${doctor}" method="post">
+                    <input type="hidden" th:field="*{id}"/>
+                    <label>Imię</label>
+                    <input type="text" th:field="*{name}">
+                    <label>Nazwisko</label>
+                    <input type="text" th:field="*{surname}">
+                    <label>Pokój</label>
+                    <input type="text" th:field="*{room}">
+                    <input type="submit" value="Dodaj"/>
+                </form>
+            <br>
+
+                <form th:action="@{/add1}" th:object="${patient}" method="post">
+                    <input type="hidden" th:field="*{id2}"/>
+                    <label>Imię</label>
+                    <input type="text" th:field="*{name2}">
+                    <label>Nazwisko</label>
+                    <input type="text" th:field="*{surname2}">
+                    <label>Pesel</label>
+                    <input type="text" th:field="*{pesel}">
+                    <input type="submit" value="Dodaj"/>
+                </form>
+
+                <!--<form th:action="@{/add3}" th:object="${visit}" method="post">-->
+                    <!--<input type="hidden" th:field="*{id3}"/>-->
+                    <!--<label>Imię</label>-->
+                    <!--<input type="text" th:field="*{who}">-->
+                    <!--<label>Nazwisko</label>-->
+                    <!--<input type="text" th:field="*{toWhom}">-->
+                    <!--<label>Pokój</label>-->
+                    <!--<input type="submit" value="Dodaj"/>-->
+                <!--</form>-->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
